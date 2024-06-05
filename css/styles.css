@@ -1,1 +1,47 @@
 /* Ini File CSS Mini Project RevoU */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-icon a img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.nav-item {
+  border: 1px solid black;
+}
+
+nav > section {
+  display: flex;
+}
+
+.banner-container {
+  height: 500px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.education-list {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-result {
+  height: 50px;
+  border: 1px solid navy;
+}
+
+.message-us-section {
+  display: flex;
+}
+
+.result-container {
+  width: 100%;
+}
