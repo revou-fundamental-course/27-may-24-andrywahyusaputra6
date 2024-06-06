@@ -9,93 +9,157 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <div class="logo-icon">
-        <a href=""><img src="img/profile.png" alt="" /></a>
-      </div>
-      <section>
-        <a class="nav-item" href="">Home</a>
-        <a class="nav-item" href="">Education</a>
-        <a class="nav-item" href="">Experience</a>
-        <a class="nav-item" href="">Contact Me</a>
+      <div class="logo-icon"></div>
+      <section class="nav-section" id="navbar-nav">
+        <a href="#home" class="nav-item">Home</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#message-us" class="nav-item">Message Us</a>
       </section>
     </nav>
-    <hr />
-    <section>
-      <!-- Section Home -->
-      <section>
+    <br />
+    <br />
+
+    <!-- Home -->
+    <section class="section" id="home">
+      <section class="home">
         <header>
-          <h1>Hi, My Name is Andry Wahyu Saputra</h1>
+          <h2>Hi <span id="name"></span>, welcome to My Web</h2>
         </header>
+
         <article>
-          <p>I'm a <span></span></p>
-          <div class="banner-container"></div>
+          <p>
+            My name is Andry Wahyu Saputra, a student majoring in Informatics
+            Engineering at Universitas Siber Asia. <br />
+            Previously, I pursued a Diploma Education in Wuxi, China, which gave
+            me the opportunity to deeply master the Mandarin language. <br />
+            Currently, I also offer Mandarin language courses to help others
+            understand and master the language.
+          </p>
+
+          <section class="slideshow-container">
+            <div class="sliders">
+              <div class="imgslide">
+                <div class="number-slide">1/3</div>
+                <img src="img/andry1.jpg" alt="" />
+                <div class="slide-capt">Simposium Event</div>
+              </div>
+
+              <div class="imgslide">
+                <div class="number-slide">2/3</div>
+                <img src="img/andry2.jpg" alt="" />
+                <div class="slide-capt">Hari Idul Fitri</div>
+              </div>
+
+              <div class="imgslide">
+                <div class="number-slide">3/3</div>
+                <img src="img/andry3.jpg" alt="" />
+                <div class="slide-capt">Rapat Kerja bersama KJRI Shanghai</div>
+              </div>
+
+              <a class="prev" onclick="nextslide(-1)">&#10094 </a>
+              <a class="next" onclick="nextslide(1)">&#10095 </a>
+            </div>            
+          </script>
         </article>
       </section>
-      <hr />
 
-      <!-- Section Education -->
-      <section>
+      <!-- 
+              -->
+      <!-- akhir Home -->
+
+      <!-- Our Facilities -->
+      <section class="experience" id="experience">
         <header>
-          <h1>My Education</h1>
+          <h2>Experience</h2>
         </header>
-        <article class="education-list">
-          <div>
-            <div
-              style="height: 50px; width: 50px; border: 1px solid black"
-            ></div>
-            <h5>Elementary</h5>
+        <div class="experience-list">
+          <div class="container-experience">
+            <div class="experience-one">
+              <img src="img/experience/expe-beasiswa.jpg" alt="" />
+            </div>
+            <h4>Scholarship</h4>
           </div>
-
-          <div>
-            <div
-              style="height: 50px; width: 50px; border: 1px solid black"
-            ></div>
-            <h5>Junior Highschool</h5>
+          <div class="container-experience">
+            <div class="experience-two">
+              <img src="img/experience/expe-radio.png" alt="" />
+            </div>
+            <h4>Be PPI Announcer</h4>
           </div>
-
-          <div>
-            <div
-              style="height: 50px; width: 50px; border: 1px solid black"
-            ></div>
-            <h5>Senior Highschool</h5>
+          <div class="container-experience">
+            <div class="experience-three">
+              <img src="img/experience/expe-kerja.png" alt="" />
+            </div>
+            <h4>Work as Chinese Translator</h4>
           </div>
-
-          <div>
-            <div
-              style="height: 50px; width: 50px; border: 1px solid black"
-            ></div>
-            <h5>University</h5>
-          </div>
-        </article>
+        </div>
       </section>
-      <hr />
+      <!-- akhir our facilities -->
 
-      <!-- Section Contact Us-->
-      <section>
+      <!-- Message Us -->
+      <section class="message-us" id="message-us">
         <header>
-          <h1>Contact Us</h1>
+          <h2>Message Us</h2>
         </header>
 
-        <section>
-          <!-- Form -->
-          <section class="message-us-section">
-            <form action="">
-              <label for="name">Name : </label>
-              <input type="text" id="name" />
+        <section class="message-us-section">
+          <!-- form -->
+          <section class="form-container">
+            <form id="formulir">
+              <div class="form-group">
+                <label for="nama" class="">Nama :</label>
+                <input
+                  type="text"
+                  id="nama"
+                  name="nama"
+                  placeholder="Nama Anda"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="tgl_lahir" class="">Tanggal Lahir :</label>
+                <input type="date" id="tgl_lahir" name="tgl_lahir" required />
+              </div>
+              <div class="form-group">
+                <label>Jenis Kelamin:</label>
+                <input
+                  type="radio"
+                  id="lakilaki"
+                  name="jenis_kelamin"
+                  value="Laki-laki"
+                  required
+                />
+                <label for="lakilaki">Laki-laki</label>
+                <input
+                  type="radio"
+                  id="perempuan"
+                  name="jenis_kelamin"
+                  value="Perempuan"
+                />
+                <label for="perempuan">Perempuan</label>
+              </div>
+              <div class="form-group">
+                <label for="pesan">Pesan :</label>
+                <textarea id="pesan" name="pesan" rows="4" required></textarea>
+              </div>
+              <button type="submit" id="submit">Kirim</button>
             </form>
           </section>
 
           <!-- Result -->
           <section class="result-container">
-            <div class="form-result"></div>
+            <div class="form-result">
+              <textarea id="result" rows="15" cols="20" readonly></textarea>
+            </div>
           </section>
         </section>
       </section>
+      <!-- akhir message us -->
     </section>
-    <hr />
 
-    <footer>
-      <p>ini footer</p>
+    <footer class="footer">
+      <p>&copy;2024 - andrywsaputra</p>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

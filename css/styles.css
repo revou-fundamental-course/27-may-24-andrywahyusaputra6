@@ -1,47 +1,381 @@
 /* Ini File CSS Mini Project RevoU */
+:root {
+  --basic: #eeeeee;
+  --font: #003285;
+  --secondary: #686d76;
+}
+
+* {
+  background-color: var(--background);
+  color: var(--font);
+  font-family: Georgia, "Times New Roman", sans-serif;
+}
+
+body {
+  font-family: Source Sans Pro, sans-serif;
+  box-sizing: border-box;
+  min-width: fit-content;
+}
+
+/* Media Query */
+@media only screen and (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-section {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-icon {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  background-image: url(../img/profile.png);
+  background-size: cover;
+  padding-top: 50px;
+  padding-left: 50px;
+  background-repeat: no-repeat;
+}
+
+.logo-icon:hover {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  padding-top: 50px;
+  padding-left: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 nav {
   display: flex;
   justify-content: space-between;
+  background-color: #1e2a3d;
+  padding-left: 200px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-.logo-icon a img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: 1px solid black;
+nav section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 150px;
 }
 
 .nav-item {
-  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
 }
 
-nav > section {
-  display: flex;
+.nav-item:hover {
+  background-color: #00429a;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.banner-container {
-  height: 500px;
-  width: 100%;
-  border: 1px solid black;
+@media only screen and (max-width: 600px) {
+  .nav-section {
+    flex-direction: column;
+    width: 40%;
+    display: none;
+    text-align: center;
+  }
+
+  .logo-icon {
+    align-items: center;
+  }
+
+  /* .nav-section.active {
+    display: flex;
+  } */
+
+  .experience-list {
+    display: block;
+    block-size: auto;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+
+  .container-experience {
+    display: blok;
+    justify-content: center;
+    min-width: 200px;
+  }
+
+  .experience-one,
+  .experience-two,
+  .experience-three {
+    width: 100px;
+    height: 100px;
+    background-color: #074209;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+  }
 }
 
-.education-list {
-  display: flex;
+h2 {
+  margin-top: 90px;
+  margin-left: 40px;
+  font-size: 40px;
   text-align: center;
-  align-items: center;
-  justify-content: space-around;
 }
 
-.form-result {
+.home {
+  text-align: justify;
+  background-color: #ffffff;
+}
+
+p {
+  margin: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+
+hr {
+  border: 1px solid rgb(241, 241, 241);
+}
+
+/* BANNER */
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img {
+  width: 1000px;
+}
+
+.imgslide {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+  height: 400px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  color: var(--font);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: var(--background);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  color: var(--basic);
+  background-color: var(--secondary);
+}
+
+.slide-capt {
+  color: var(--font);
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8;
+  width: 100%;
+  text-align: center;
+}
+
+.sliders .number-slide {
+  columns: var(--secondary);
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .sliders {
+    padding: 8px 50px 12px 50px;
+  }
+  .next {
+    right: 50px;
+    border-radius: 3px 0 0 3px;
+  }
+}
+
+/* EXPERIENCE */
+.experience {
+  background-color: #eee;
+  min-height: 350px;
+}
+
+.experience-list {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.container-experience img {
+  width: 300px;
+  height: 300px;
+}
+
+/* 
+.experience-satu,
+.experience-dua,
+.experience-tiga img {
+  width: 50px;
   height: 50px;
-  border: 1px solid navy;
+  background-color: #074209;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px;
+}
+.experience-one {
+  background-image: url(../img/experience/expe-beasiswa.jpg);
+}
+
+.experience-two {
+  background-image: url(../img/experience/expe-radio.png);
+}
+
+.experience-three {
+  background-image: url(/img/experience/expe-kerja.png);
+  
+  .facility-satu:hover,
+  .facility-dua:hover,
+  .facility-tiga:hover {
+    width: 200px;
+    height: 200px;
+    }
+  } */
+
+.message-us {
+  padding-bottom: 40px;
 }
 
 .message-us-section {
   display: flex;
+  flex: 1;
+  justify-content: left;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
-.result-container {
+.form-container {
+  flex: 1;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+form {
+  margin-left: 40px;
+  padding: 20px;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  background-color: #eee;
+  min-width: 170px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  width: 30%;
+  margin-right: 10px;
+  color: #666;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+}
+
+form button {
   width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Pembungkus Textarea*/
+.result-container {
+  flex: 1;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+/* untuk menampilkan hasil inputan form */
+.form-result > textarea {
+  height: 300px;
+  width: 94%;
+  border: 1px solid #b6b2b2;
+  border-radius: 8px;
+  font-size: 1em;
+  min-width: 170px;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #eee;
+  padding: 1px;
+  text-align: center;
 }
